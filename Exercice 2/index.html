@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercice 2 Canvas</title>
+  </head>
+  <body>
+    <canvas id="mon_canvas" width="400" height="400">
+      Texte alternatif pour les navigateurs ne supportant pas Canvas.
+    </canvas>
+    <script>
+    var c = document.getElementById('mon_canvas');
+    var ctx = c.getContext('2d');
+    // Structure de la maison
+    ctx.fillStyle = 'rgb(161,216,230)';
+    ctx.fillRect(75,150,325,350);
+
+    // Porte & Fenetres
+    ctx.fillStyle = 'rgb(201,201,201)';
+    ctx.fillRect(200,300,60,100);
+    ctx.fillRect(100,175,50,50);
+    ctx.fillRect(325,175,50,50);
+
+    // Toit
+    ctx.beginPath();
+    ctx.moveTo(75,150);
+    ctx.lineTo(250,0);
+    ctx.lineTo(400,150);
+    ctx.fillStyle='rgb(215,130,61)';
+    ctx.fill();
+
+    </script>
+  </body>
+</html>

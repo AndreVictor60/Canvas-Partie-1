@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercice 1 Canvas</title>
+  </head>
+  <body>
+    <canvas id="mon_canvas" width="400" height="400">
+      Texte alternatif pour les navigateurs ne supportant pas Canvas.
+    </canvas>
+    <script>
+    var c = document.getElementById('mon_canvas');
+    var ctx = c.getContext('2d');
+    // Structure de la maison
+    
+    // Début du chemin
+    ctx.beginPath();
+    // Point haut a gauche
+    ctx.moveTo(75,150);
+    // Point bas a gauche
+    ctx.lineTo(75,400);
+    // Point bas a droite
+    ctx.lineTo(325,400);
+    // Point haut a droite
+    ctx.lineTo(325,150);
+    // Définition de la couleur de remplissage
+    ctx.fillStyle = 'rgb(161,216,230)';
+    // Application du remplissage
+    ctx.fill();
+
+    // Porte
+    ctx.beginPath();
+    ctx.moveTo(170,300);
+    ctx.lineTo(170,400);
+    ctx.lineTo(230,400);
+    ctx.lineTo(230,300);
+    ctx.fillStyle='rgb(201,201,201)';
+    ctx.fill();
+
+    // 1 Fenetre
+    ctx.beginPath();
+    ctx.moveTo(100,175);
+    ctx.lineTo(100,225);
+    ctx.lineTo(150,225);
+    ctx.lineTo(150,175);
+    ctx.fillStyle='rgb(201,201,201)';
+    ctx.fill();
+
+    // 2 Fenetre
+    ctx.beginPath();
+    ctx.moveTo(250,175);
+    ctx.lineTo(250,225);
+    ctx.lineTo(300,225);
+    ctx.lineTo(300,175);
+    ctx.fillStyle='rgb(201,201,201)';
+    ctx.fill();
+
+    // Toit
+    ctx.beginPath();
+    ctx.moveTo(75,150);
+    ctx.lineTo(200,0);
+    ctx.lineTo(325,150);
+    ctx.fillStyle='rgb(215,130,61)';
+    ctx.fill();
+    </script>
+  </body>
+</html>
